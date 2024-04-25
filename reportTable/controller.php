@@ -7,7 +7,7 @@
         header("location: ../login/login.php");
     }
 
-    $sql = "select * from report";
+    $sql = "select * from report where status=1";
     $result = $con->query($sql);
 
     // Verificar si hay filas en el resultado
@@ -37,7 +37,7 @@
             else{
                 $id = $_POST["id"];
 
-                $sql = $con->query("delete from report where id=$id");
+                $sql = $con->query("update report set status=0, updateDate=now() where id=$id");
 
                 if ($sql === true) {
                     echo '<div class="text-success">Reporte eliminado.</div>';
