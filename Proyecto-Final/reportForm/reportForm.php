@@ -64,7 +64,7 @@
 					</div>
 					<script src="script.js"></script>
 				</form>
-                <script src="https://maps.googleapis.com/maps/api/js?key=APIKEY&callback=initMap" async defer></script>
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv_ZneBCoB6kjriMLghhs_uH0xnYJUQFA&callback=initMap" async defer></script>
 
                 <script>
                     var marker;
