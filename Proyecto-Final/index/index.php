@@ -68,12 +68,12 @@
               <span>Nuevo Reporte</span>
             </a>
           </li>
-          <!--li>
-            <a href="#" onclick="changeForms('../acountForm/acountForm.php')">
+          <li>
+            <a href="#" onclick="changeForms('../account/account.php')">
               <i class="fa fa-folder"></i>
-              <span>Mi Cuenta</span>
+              <span>Cuenta</span>
             </a>
-          </li-->
+          </li>
         </ul>
       </div>
       <!-- sidebar-menu  -->
@@ -89,7 +89,7 @@
   <!-- sidebar-wrapper  -->
   <main class="page-content">
     <div class="container-fluid">
-    <iframe id="formFrame" src="" width="100%" height="90%" class="frame"></iframe>
+    <iframe id="formFrame" src="../reportTable/reportTable.php" width="100%" height="90%" class="frame"></iframe>
 
       <footer class="text-center">
         <div class="mb-2">
@@ -112,6 +112,15 @@
     
 </body>
 <script>
+  var savedURL = localStorage.getItem('iframeURL');
+  if (savedURL) {
+    document.getElementById('formFrame').src = savedURL;
+  }
+
+  window.addEventListener('beforeunload', function() {
+    localStorage.setItem('iframeURL', document.getElementById('formFrame').src);
+  });
+
   function changeForms(archivo) {
     document.getElementById('formFrame').src = archivo;
   }
