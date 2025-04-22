@@ -26,7 +26,7 @@
                                 </form>
                         </div>
                         <script>
-                            let scriptURL = 'https://script.google.com/macros/s/AKfycbwHxSXAtp-A7tJCsCUAbDY4j3t0vEcfL5pN95tL2SyZb9aQx8IE99LEGg44AaN-OiBhhg/exec';
+                            let scriptURL = 'Script';
                             let form = document.forms['submit-form'];
 
                             form.addEventListener('submit', e => {
